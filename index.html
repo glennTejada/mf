@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<div class="main">
+    <div class="banner">
+
+    </div>
+    <div class="container">
+        <section id="home" class="text-center custom-section">
+            <div class="custom-title text-center">
+                <p class="title-home">Let MasterFoods help you squeeze more into Easter this year with gift cards to be won daily. Enter for a chance to win a share of $75,000!</p>
+            </div>
+            <button id="enterForm" class="mt-5 mb-5">Enter</button>
+            <div class="custom-description text-center">
+                <p>*T&Cs apply, see www.masterfoods.com.au/competition. Open to AU res 18+. Starts 12:01am AEST 16/03/2022. Ends 11:59pm AEST 26/04/2022. Retain receipt/s. To enter promotion, purchase qualifying product, complete the entry form incl. uploading receipt for your chance to provisionally win. (Game of Chance): Max 1 entry per day. 1500 x $50 prepaid vouchers. Total prize pool up to $75000. Winners listed on website 02/05/2022. Promoter is Mars Australia Pty Ltd t/as Mars Food (ABN 48 008 454 313) of Tower 2, Collins Square, 727 Collins St, Docklands, Melbourne VIC 3008. NSW TP/01302. ACT 22/00002. SA T21/2087.</p>
+            </div>
+        </section>
+        <section id="form" class="custom-section">
+            <div class="custom-title text-center">
+                <h1>WIN a share of $75,000 Instantly!*</h1>
+                <p>To enter, purchase any MasterFoods Tomato or Barbecue sauce from any participating Woolworths store, complete the details below and upload your proof of purchase.<br>Competition ends 26/04/2022. </p>
+            </div>
+            <form id="formEntry" class="mt-5 mb-5" enctype="multipart/form-data">
+                <div class="custom-form row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="first_name" id="first_name" placeholder="First Name*" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Last Name*" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select class="form-control" name="product" id="product" required>
+                            <option>Product*</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Email*" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="postcode" id="postcode" placeholder="Postcode*" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="receipt_number" id="receipt_number" placeholder="Receipt number*" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="phone_number" id="phone_number" placeholder="Phone Number" >
+                    </div>
+                    <div class="file-select col-md-6">
+                        <div class="file-select-name" id="noFile">Purchase Receipt*</div>
+                        <div class="file-select-button" id="fileName">
+                            <img src="icon_upload.png">
+                            <span>Choose File</span>
+                        </div>
+                        <input type="file" name="upload" id="upload" required>
+                    </div>
+                </div>
+                <div class="checkbox-custom">
+                    <p>* Mandatory Fields</p>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="" required id="checkbox1">
+                        <label class="form-check-label" for="checkbox1">
+                            I am 18 years of age or older and I have read and accept the Terms & Conditions and the Privacy Policy
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="" required id="checkbox2">
+                        <label class="form-check-label" for="checkbox2">
+                            I would like to receive marketing communications from MasterFoods.
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="" required id="checkbox3">
+                        <label class="form-check-label" for="checkbox3">
+                            I understand that I must retain receipt(s) as proof of purchase
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="submit-form-winner" class="custom-section">
+            <div class="custom-title text-center">
+                <h1>Congratulations!</h1>
+                <p>You’ve won a $50 Prezzee Voucher! <br> An email will be sent shortly to your nominated email address notifying you of how to claim your prize.</p>
+            </div>
+        </section>
+
+        <section id="submit-form-loser" class="custom-section">
+            <div class="custom-title text-center">
+                <h1>SORRY!</h1>
+                <p>Unfortunately, you didn’t win this time, but please feel free to enter again with your next purchase.</p>
+            </div>
+        </section>
+
+        <section id="closed" class="custom-section">
+            <div class="custom-title text-center">
+                <h1>COMPETITION CLOSED</h1>
+                <p id="closed-text"></p>
+                <div class="winners-list row"></div>
+                <div class="unclaimed-prize-winners-list row"></div>
+                <span id="forfeited-prizes" style="display: none;">At the conclusion of this promotion, <span id="forfeits"></span> prizes were unclaimed and have been forfeited.</span>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center">
+        <a href="https://www.masterfoods.com.au/contact-us/" target="_blank">CONTACT</a>|
+        <a href="https://www.mars.com/privacy-policy-australia" target="_blank">PRIVACY</a>|
+        <a href="t&c.pdf" target="_blank">*TERMS & CONDITIONS</a>|
+        <a href="faqs.pdf" target="_blank">FAQ</a>
+    </footer>
+</div>

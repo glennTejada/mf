@@ -1,0 +1,232 @@
+.main {
+    background-color: #8C0E2F;
+}
+.main .container .custom-section {
+    display: none;
+    min-height: 30vh;
+}
+.main .banner img {
+    width: 100%;
+}
+.main .custom-description p {
+    width: 93%;
+    margin: auto auto 20px auto;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.main .custom-title {
+    margin-bottom: 30px;
+}
+.main .custom-title p, .custom-title span{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    width: 75%;
+    margin: 20px auto 20px auto;
+}
+.main .custom-title h1 {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 50%;
+    margin: 20px auto 20px auto;
+}
+.main .custom-title .title-home {
+    width: 40%;
+}
+.main .custom-form input[type=text], .custom-form input[type=email] {
+    background: #FFFFFF;
+    border: 1px solid #C7C6C6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #535353;
+}
+.main .custom-form select {
+    background: #FFFFFF;
+    border: 1px solid #C7C6C6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 50px !important;
+
+}
+.main .checkbox-custom .form-group {
+    margin-left: 20px;
+}
+.main .form-check-input {
+    margin-top: 0.1rem !important;
+}
+.main .checkbox-custom {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.main button {
+    width: 250px;
+    height: 50px;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8C0E32;
+    border-radius: 10px !important;
+    border: none;
+}
+.main button:hover {
+    color: white;
+    background-color: black;
+}
+.main footer {
+    background-color: black;
+    height: 75px;
+    width: 100%;
+    line-height: 75px;
+    color: white;
+}
+.main footer a {
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.main .winner, .unclaimed-prize-winner {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    .main .custom-title .title-home {
+        width: 100%;
+    }
+    .main .custom-title p {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        width: 100%;
+    }
+    .main .custom-title h1 {
+        width: 90%;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.01em;
+    }
+    .main .checkbox-custom label{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .main footer a {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .main .overlay .icon-loading{
+        top: 40%;
+        left: 40%;
+    }
+}
+
+
+/****** File upload ******/
+.main .file-select {
+    display: block;
+    position: relative;
+    height: 70px;
+}
+.main .file-select input {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.main .file-select .file-select-name {
+    position: absolute;
+    width: 43%;
+    left: 15px;
+    top: 0;
+    background: #FFFFFF;
+    border: 1px solid #C7C6C6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    color: #535353;
+}
+.main .file-select .file-select-button {
+    position: absolute;
+    width: 43%;
+    right: 20px;
+    top: 0;
+    background: #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+.main .file-select .file-select-button img {
+    position: absolute;
+    width: 25px;
+    top: 8px;
+    left: 65px;
+}
+.main .file-select .file-select-button span {
+    margin-left: 40px;
+}
+@media (max-width: 500px) {
+    .main .file-select {
+        height: 150px;
+    }
+    .main .file-select .file-select-button {
+        width: 93%;
+        top: 70px;
+        left: 15px;
+    }
+    .main .file-select .file-select-name {
+        width: 93%;
+        top: 0;
+        left: 15px;
+    }
+    .main .file-select .file-select-button img {
+        left: 100px;
+    }
+}
